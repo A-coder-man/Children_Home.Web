@@ -1,57 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Under Construction</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Login and Registration</title>
   <style>
     body {
-      background-color: black;
-      color: white;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
 
     .container {
-      width: 400px;
-      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      padding: 20px;
+      width: 100%;
     }
 
-    .logo {
-      width: 100px;
-      height: 100px;
-      margin: 20px 0;
+    .tab {
+      display: none;
     }
 
-    .message {
-      text-align: center;
+    .tab.active {
+      display: block;
     }
 
-    .animation {
-      animation: spin 2s infinite linear;
+    .tab-header {
+      display: flex;
+      margin-bottom: 20px;
     }
 
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
+    .tab-header button {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      margin-right: 10px;
+      padding: 5px 10px;
+    }
 
-      to {
-        transform: rotate(360deg);
-      }
+    .tab-header button.active {
+      border-color: #3498db;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .form-group button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="logo">
-      <img src="https://assets1.lottiefiles.com/packages/lf20_xbtjg3n.json" class="animation" />
+    <div class="tab-header">
+      <button onclick="showTab(0)" class="active">Login</button>
+      <button onclick="showTab(1)">Register</button>
     </div>
-    <div class="message">
-      <h1>Website Under Construction</h1>
-      <p>This website is currently under construction. Please check back later.</p>
-      <div class="animation">
-        <span class="fa fa-spinner fa-pulse"></span>
-      </div>
+    <div class="tab" id="loginTab">
+      <form>
+        <div class="form-group">
+          <label for="loginEmail">Email:</label>
+          <input type="email" id="loginEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password:</label>
+          <input type="password" id="loginPassword" required>
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+    <div class="tab" id="registerTab">
+      <form>
+        <div class="form-group">
+          <label for="registerName">Name:</label>
+          <input type="text" id="registerName" required>
+        </div>
+        <div class="form-group">
+          <label for="registerEmail">Email:</label>
+          <input type="email" id="registerEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="registerPassword">Password:</label>
+          <input type="password" id="registerPassword" required>
+        </div>
+        <div class="form-group">
+          <button type="submit">Register</button>
+        </div>
+      </form>
     </div>
   </div>
+
+  <script>
+    function showTab(tabIndex) {
+      const tabs = document.querySelectorAll(".tab");
+      const tabButtons = document.querySelectorAll(".tab-header button");
+      tabs.forEach((tab, index) => {
+        if (index === tabIndex) {
+          tab.classList.add("active");
+          tabButtons[index].classList.add("active");
+        } else {
+          tab.classList.remove("active");
+          tabButtons[index].classList.remove("active");
+        }
+      });
+    }
+  </script>
 </body>
 </html>
-
