@@ -1,25 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Animated Hello</title>
+  <title>Under Construction</title>
   <style>
-    h1 {
-      animation: hello 5s infinite;
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
     }
 
-    @keyframes hello {
+    .container {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin: 20px 0;
+    }
+
+    .message {
+      text-align: center;
+    }
+
+    .animation {
+      animation: spin 2s infinite linear;
+    }
+
+    @keyframes spin {
       from {
-        text-align: center;
+        transform: rotate(0deg);
       }
 
       to {
-        text-align: right;
+        transform: rotate(360deg);
       }
     }
   </style>
 </head>
 <body>
-  <h1>Hello!</h1>
+  <div class="container">
+    <div class="logo">
+      <img src="https://www.w3schools.com/images/w3schools.png" alt="W3Schools Logo" />
+    </div>
+    <div class="message">
+      <h1>Website Under Construction</h1>
+      <p>This website is currently under construction. Please check back later.</p>
+      <div class="animation">
+        <span class="fa fa-spinner fa-pulse"></span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
+<img src="https://assets1.lottiefiles.com/packages/lf20_xbtjg3n.json" class="animation" />
