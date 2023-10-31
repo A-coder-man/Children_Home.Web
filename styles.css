@@ -1,36 +1,49 @@
-HTML CSS Result Skip Results Iframe
-/* GLOBAL STYLES */
+/* Reset some default styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color and text styles */
 body {
-  background-color: coral;
-  padding-top: 5em;
-  display: flex;
-  justify-content: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
-/* DEMO-SPECIFIC STYLES */
-.typewriter h1 {
-  color: black;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+nav ul {
+  list-style-type: none;
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
+nav li {
+  display: inline;
+  margin-right: 10px;
 }
 
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
 
+main {
+  margin: 20px;
+}
+
+section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
