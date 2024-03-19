@@ -1,0 +1,92 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #555;
+}
+
+input[type="number"],
+select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+}
+
+button {
+    padding: 14px 28px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#exerciseResults {
+    margin-top: 20px;
+}
+
+.answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.answer.show {
+    display: block;
+}
+
+#toggleAnswers {
+    background-color: #2196F3;
+    margin-top: 20px;
+}
+
+#toggleAnswers:hover {
+    background-color: #0b7dda;
+}
