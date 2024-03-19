@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Get user input
         const operation = document.getElementById("operation").value;
-        const min = parseInt(document.getElementById("min").value);
-        const max = parseInt(document.getElementById("max").value);
+        const upper = parseInt(document.getElementById("upper").value);
+        const lower = parseInt(document.getElementById("lower").value);
         const numExercises = parseInt(document.getElementById("exercises").value);
 
         // Generate and display exercises
         for (let i = 0; i < numExercises; i++) {
-            const num1 = getRandomNumber(min, max);
-            const num2 = getRandomNumber(min, max);
+            const num1 = getRandomNumber(lower, upper);
+            const num2 = getRandomNumber(lower, upper);
             let exercise;
             let answer;
 
