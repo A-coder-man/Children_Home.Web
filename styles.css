@@ -82,11 +82,22 @@ button:disabled {
     display: block;
 }
 
-#toggleAnswers {
+#toggleAnswers,
+#print {
+    padding: 14px 28px;
     background-color: #2196F3;
-    margin-top: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
 }
 
-#toggleAnswers:hover {
+#toggleAnswers:hover,
+#print:hover {
     background-color: #0b7dda;
 }
