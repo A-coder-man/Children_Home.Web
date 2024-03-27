@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Exercise Generator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -19,22 +19,24 @@
                 <option value="division">Division</option>
             </select>
             
-            <label for="upper">Enter upper operand length:</label>
+            <label for="upper">Upper Operand Length:</label>
             <input type="number" id="upper" min="1" max="10" placeholder="Enter value">
             
-            <label for="lower">Enter lower operand length:</label>
+            <label for="lower">Lower Operand Length:</label>
             <input type="number" id="lower" min="1" max="10" placeholder="Enter value">
             
             <label for="numSums">Number of Sums:</label>
-            <input type="number" id="numSums" min="1" value="10">
+            <input type="number" id="numSums" min="1" placeholder="Enter value">
             
             <button type="submit" id="generate">Generate Exercises</button>
             <button type="button" id="toggleAnswers">Show/Hide Answers</button>
+            <button type="button" id="print">Print Exercises (PDF)</button>
         </form>
 
         <div id="exerciseResults"></div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
