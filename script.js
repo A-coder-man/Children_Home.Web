@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     printBtn.addEventListener("click", function() {
+        console.log("Print button clicked");
         const doc = new jsPDF();
         let y = 10;
 
@@ -82,7 +83,12 @@ document.addEventListener("DOMContentLoaded", function() {
             y += 10;
         });
 
-        doc.save("math_exercises.pdf");
+        try {
+            doc.save("math_exercises.pdf");
+            console.log("PDF generated successfully");
+        } catch (error) {
+            console.error("Error generating PDF:", error);
+        }
     });
 
     // Function to generate a random number with a specified length
