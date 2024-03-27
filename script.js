@@ -2,12 +2,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const exerciseForm = document.getElementById("exerciseForm");
     const exerciseResults = document.getElementById("exerciseResults");
     const toggleAnswersBtn = document.getElementById("toggleAnswers");
+    const printBtn = document.getElementById("print");
+
+    let exercises = [];
 
     exerciseForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
         // Clear previous results
         exerciseResults.innerHTML = "";
+        exercises = [];
 
         // Get user input
         const operation = document.getElementById("operation").value;
@@ -49,6 +53,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     answer = "";
             }
 
+            exercises.push({ exercise, answer });
+        }
+
+        // Display exercises
+        exercises.forEach(({ exercise, answer }) => {
             const exerciseElement = document.createElement("p");
             exerciseElement.textContent = `${exercise} = `;
             const answerElement = document.createElement("span");
@@ -56,12 +65,24 @@ document.addEventListener("DOMContentLoaded", function() {
             answerElement.classList.add("answer");
             exerciseElement.appendChild(answerElement);
             exerciseResults.appendChild(exerciseElement);
-        }
+        });
     });
 
     toggleAnswersBtn.addEventListener("click", function() {
         const answers = document.querySelectorAll(".answer");
         answers.forEach(answer => answer.classList.toggle("show"));
+    });
+
+    printBtn.addEventListener("click", function() {
+        const doc = new jsPDF();
+        let y = 10;
+
+        exercises.forEach(({ exercise, answer }) => {
+            doc.text(exercise + ' = ' + answer, 10, y);
+            y += 10;
+        });
+
+        doc.save("math_exercises.pdf");
     });
 
     // Function to generate a random number with a specified length
