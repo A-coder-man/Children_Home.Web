@@ -1,103 +1,63 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-    font-size: 32px;
-    margin-bottom: 20px;
+h2 {
+  text-align: center;
+  color: #333;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
-    margin-bottom: 8px;
-    font-size: 18px;
-    color: #555;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
+input[type="text"],
+input[type="email"],
 input[type="number"],
-select {
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    width: 100%;
-    max-width: 300px;
-    font-size: 16px;
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-button {
-    padding: 14px 28px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 18px;
-    margin-top: 10px;
-    width: 100%;
-    max-width: 300px;
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-button:hover {
-    background-color: #45a049;
+button[type="submit"]:hover {
+  background-color: #45a049;
 }
 
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+input:focus,
+button:focus {
+  outline: none;
 }
 
-#exerciseResults {
-    margin-top: 20px;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.answer {
-    display: none;
-    margin-top: 10px;
-    font-size: 18px;
-    color: #555;
-}
-
-.answer.show {
-    display: block;
-}
-
-#toggleAnswers,
-#print {
-    padding: 14px 28px;
-    background-color: #2196F3;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 18px;
-    margin-top: 10px;
-    width: 100%;
-    max-width: 300px;
-}
-
-#toggleAnswers:hover,
-#print:hover {
-    background-color: #0b7dda;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
