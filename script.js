@@ -66,6 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to generate a random number with a specified length
     function generateNumber(length) {
-        return Math.floor(Math.random() * (Math.pow(10, length)));
+        return Math.floor(Math.random() * Math.pow(10, length));
     }
 });
