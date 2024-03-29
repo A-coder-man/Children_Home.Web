@@ -1,63 +1,96 @@
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-h2 {
-  text-align: center;
-  color: #333;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-form {
-  max-width: 400px;
-  margin: 20px auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.logo img {
+    width: 150px;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-button[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  cursor: pointer;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
-button[type="submit"]:hover {
-  background-color: #45a049;
+main {
+    padding: 20px;
 }
 
-input:focus,
-button:focus {
-  outline: none;
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
+.social-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Section Styles */
+.banner {
+    background-image: url('banner-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.about-section {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #555;
 }
