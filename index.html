@@ -3,52 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trust NGO</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Full Faith Foundation - Empowering Through Compassion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(rgba(44,62,80,0.9), rgba(44,62,80,0.9)),
+                        url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b') center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            background: #2c3e50;
+            position: sticky;
+            top: 0;
+            padding: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: #f1c40f;
+            color: #2c3e50;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .program-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            margin: 0 1rem;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Trust NGO">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#get-involved">Get Involved</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <h1>Full Faith Foundation</h1>
+        <p>Empowering Lives Through Faith & Compassion Since 2017</p>
+        <a href="#donate" class="cta-button">Donate Now</a>
     </header>
-    <main>
-        <section id="home" class="banner">
-            <h1>Welcome to Trust NGO</h1>
-            <p>Making a difference in the world, one step at a time.</p>
-            <div class="cta-buttons">
-                <a href="#donate" class="btn">Donate Now</a>
-                <a href="#get-involved" class="btn">Get Involved</a>
-            </div>
-        </section>
-        <section id="about" class="about-section">
-            <div class="about-content">
-                <h2>About Us</h2>
-                <p>Trust NGO is dedicated to improving the lives of communities through various programs and initiatives.</p>
-                <a href="#programs" class="btn">Learn More</a>
-            </div>
-        </section>
-        <!-- Other sections like Programs, Get Involved, Contact Us can be added similarly -->
-    </main>
-    <footer>
-        <div class="footer-content">
-            <p>Contact us: info@trustngo.org | 123-456-7890</p>
-            <ul class="social-links">
-                <li><a href="https://facebook.com/trustngo" target="_blank">Facebook</a></li>
-                <li><a href="https://twitter.com/trustngo" target="_blank">Twitter</a></li>
-                <li><a href="https://instagram.com/trustngo" target="_blank">Instagram</a></li>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>Our Mission</h2>
+        <div class="about-content">
+            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ba" alt="Our Team" style="max-width: 500px; float: right; margin-left: 2rem;">
+            <p>Registered under Govt. of NCT Delhi (Reg. No. 268), we work to:</p>
+            <ul>
+                <li>Provide shelter to orphans and elderly</li>
+                <li>Operate educational institutions</li>
+                <li>Conduct medical camps</li>
+                <li>Promote spiritual growth</li>
             </ul>
         </div>
-        <p>&copy; 2024 Trust NGO. All rights reserved.</p>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="section">
+        <h2>Our Programs</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433" alt="Education Program">
+                <h3>Education Initiatives</h3>
+                <p>Schools, vocational training, and scholarship programs</p>
+            </div>
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ba" alt="Healthcare Program">
+                <h3>Healthcare Services</h3>
+                <p>Free medical camps and mobile clinics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Verification -->
+    <section class="section" style="background: #f8f9fa;">
+        <h2>Legal Compliance</h2>
+        <div class="verification-badges">
+            <a href="https://www.shcilestamp.com" target="_blank">
+                <img src="stamp-icon.png" alt="Verify Stamp">
+            </a>
+            <p>Registration No. 268 | 80G Certified</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>📌 63-A, Gopal Nagar, Shyam Enclave<br>
+                   Najafgarh, New Delhi - 110043</p>
+                <p>📞 +91 98765 43210</p>
+            </div>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+        </div>
+        <p>© 2024 Full Faith Foundation. Registered Charity under Indian Trust Act.</p>
+        <div class="legal-links">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Annual Report</a>
+        </div>
     </footer>
 </body>
 </html>
